@@ -1,0 +1,19 @@
+{
+  "name": "challenge-microservice-api",
+  "version": "1.0.0",
+  "description": "_É de suma importancia que você leia até o final antes de começar a fazer o desafio_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mailgun-js": "^0.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.8",
+    "typescript": "^4.5.2"
+  }
+}
