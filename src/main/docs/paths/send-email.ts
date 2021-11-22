@@ -7,14 +7,23 @@ export const sendMailPath = {
             content: {
                 'application/json': {
                     schema: {
-                        $ref: '#/schemas/sendEmailParams'
+                        $ref: '#/schemas/sendMailParams'
                     }
                 }
             }
         },
         responses: {
             200: {
-                description: 'Senha trocada'
+                description: 'E-mail enviado'
+            },
+            400: {
+                $ref: '#/components/badRequest'
+            },
+            401: {
+                $ref: '#/components/unauthorized'
+            },
+            500: {
+                $ref: '#/components/serverError'
             }
         }
     }
