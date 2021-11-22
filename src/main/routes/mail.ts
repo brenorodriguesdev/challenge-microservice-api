@@ -5,5 +5,5 @@ import { makeSendEmailController } from "../factories/controllers/send-email"
 import { makeAuthKeyMiddleware } from "../factories/middlewares/auth-key"
 
 export default (router: Router): void => {
-    router.post('/send', adaptMiddleware(makeAuthKeyMiddleware()),adaptRouter(makeSendEmailController()))
+    router.post('/send', adaptMiddleware(makeAuthKeyMiddleware()), adaptRouter(makeSendEmailController()))
 }
