@@ -1,4 +1,4 @@
-import { MailProvider, MailRequest, MailResponse } from "../../data/contracts/mail-provider"
+import { MailProvider, MailRequest, MailResponse } from "../../data/contracts/providers/mail-provider"
 import * as mailgun from 'mailgun-js'
 
 export class MailgunProvider implements MailProvider {

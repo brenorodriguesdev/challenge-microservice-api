@@ -1,7 +1,7 @@
 import { SendEmailRequestModel } from "../../domain/models/send-email-request"
 import { SendEmailResponseModel } from "../../domain/models/send-email-response"
 import { SendEmailUseCase } from "../../domain/useCases/send-email"
-import { MailProvider } from "../contracts/mail-provider"
+import { MailProvider } from "../contracts/providers/mail-provider"
 
 export class SendEmailService implements SendEmailUseCase {
     constructor (private readonly mailProvider: MailProvider) { }
