@@ -4,7 +4,7 @@ export const sendEmailResponseParamsSchema = {
       email: {
         type: 'string'
       },
-      htmlEmail: {
+      sent: {
         type: 'boolean'
       },
       error: {
