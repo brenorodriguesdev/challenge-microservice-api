@@ -6,11 +6,12 @@ export class MailgunProvider implements MailProvider {
         try {
             const mg = new Mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
             const data = {
-                from: `${process.env.MAILGUN_NAME} <${process.env.MAILGUN_DOMAIN}>`,
+                from: `${process.env.MAILGUN_NAME} <${process.env.MAILGUN_EMAIL}>`,
                 to: request.to,
                 subject: request.subject,
-                text: request.text
+                html: request.text
             };
+            
             await mg.messages().send(data);
             return {
                 sent: true
