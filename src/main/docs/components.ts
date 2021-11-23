@@ -8,4 +8,11 @@ export default {
     badRequest,
     serverError,
     unauthorized,
+    securitySchemes: {
+        bearerAuth: {
+            type: 'apiKey',
+            name: 'key',
+            in: 'header',
+        },
+    }
 }

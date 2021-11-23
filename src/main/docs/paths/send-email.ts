@@ -1,5 +1,8 @@
 export const sendMailPath = {
     post: {
+        security: [{
+            bearerAuth: []
+        }],
         tags: ['Mail'],
         summary: 'API para enviar email',
         requestBody: {
@@ -14,7 +17,14 @@ export const sendMailPath = {
         },
         responses: {
             200: {
-                description: 'E-mail enviado'
+                description: 'Sucesso',
+                content: {
+                    'application/json': {
+                        schema: {
+                            $ref: '#/schemas/sendEmailResponseParams'
+                        }
+                    }
+                }
             },
             400: {
                 $ref: '#/components/badRequest'

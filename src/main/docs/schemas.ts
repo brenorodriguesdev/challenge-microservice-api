@@ -1,10 +1,11 @@
 import {
-   sendMailParamsSchema,
-   errorSchema
-  } from './schemas/'
-  
-  export default {
-    sendMailParams: sendMailParamsSchema,
-    error: errorSchema
-  }
-  
+  sendMailParamsSchema,
+  errorSchema,
+  sendEmailResponseParamsSchema
+} from './schemas/'
+
+export default {
+  sendMailParams: sendMailParamsSchema,
+  error: errorSchema,
+  sendEmailResponseParams: sendEmailResponseParamsSchema
+}
